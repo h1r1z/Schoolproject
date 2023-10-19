@@ -4,7 +4,7 @@
   good, were done with installing. 
 
 2.Code
-  Download the .py file from the link itll be in the above folder ( Schoolproject )
+  Download the Schoolprojectfr.py file from the link, it'll be in the above folder ( Schoolproject )
   put the .py link in a certain folder and name it whatever you like, and put the image.jpg file in the SAME FOLDER.
 
 3.Stuff Ive done:
