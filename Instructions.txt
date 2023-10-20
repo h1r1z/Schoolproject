@@ -5,16 +5,29 @@
 
 2.Code
   Download the Schoolprojectfr.py file from the link, it'll be in the above folder ( Schoolproject )
-  put the .py link in a certain folder and name it whatever you like, and put the image.jpg file in the SAME FOLDER.
+  put the .py link in a certain folder and name it whatever you like
+  Download the files from the above directory named " pattern.png  " and " Logo.png "
+  Put them in the same Folder/Directory as Schoolprojectfr.py
 
 3.Stuff Ive done:
   Registration Page
+    Image Background
   Login Page
+    Image Background
   Main Page with no implimented functions but implimented UI features,
     UI FEATURES IMPLIMETED:
+      Logo Image 
+      Application Name ( Passkeyyz ) as Label on top
+      Breif Description of what the application is used for [as label below program name]
+      Buttons on main page:
+        Create Database Button
+        Open Existing Database Button
+      Buttons on Sidebar:
+        Randombutton1 (NO FEATURES IMPLIMENTED)
+        Randombutton2 (NO FEATURES IMPLIMENTED)
+        Randombutton3 (NO FEATURES IMPLIMENTED)
       Change Scaling
       Change from Dark Mode to Light Mode
-      Three Empty Buttons
       Welcome User Label
 
 4.Stuff you have to do (Part 1):
