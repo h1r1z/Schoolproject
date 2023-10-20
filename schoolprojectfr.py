@@ -20,6 +20,8 @@ def login(username, password):
     if username in valid_credentials and valid_credentials[username] == password:
         app.destroy()
         main_page()
+    elif username in valid_credentials and valid_credentials!= password:
+        CTkMessagebox(title="Error", message="Invalid Password",icon="cancel")
     else:
         CTkMessagebox(title="Error", message="Invalid Login Credentials", icon="cancel")
 
@@ -53,7 +55,7 @@ def main_page():
     sidebar_button_3 = ctk.CTkButton(sidebar_frame,text="randombutton3")
     sidebar_button_3.grid(row=3, column=0, padx=20, pady=10)
 
-    def change_appearance_mode_event( new_appearance_mode: str):
+    def change_appearance_mode_event(new_appearance_mode: str):
         #logic in changing appearance mode
         ctk.set_appearance_mode(new_appearance_mode)
 
@@ -74,8 +76,24 @@ def main_page():
     scaling_optionemenu = ctk.CTkOptionMenu(sidebar_frame, values=["100%","110%", "120%","90%","80%"],command=change_scaling_event)
     scaling_optionemenu.grid(row=8, column=0, padx=20, pady=(10, 20))
 
-    logo_label = ctk.CTkLabel(main_page,text="WELCOME{username}", font=ctk.CTkFont(size=20, weight="bold"))
-    logo_label.grid(row=0, column=1, padx=20, pady=(20, 10))
+    image_key=Image.open("Logo.png")
+    logo=ImageTk.PhotoImage(image_key)
+
+    logo_image = ImageTk.PhotoImage(Image.open("Logo.png"))
+    logo_image_label = ctk.CTkLabel(master=main_page,text=".", image=logo_image)
+    logo_image_label.grid(row=1, column=1, padx=20, pady=(20, 250))
+
+    logo_label = ctk.CTkLabel(main_page,text="WELCOME TO PASSKEYYZ", font=ctk.CTkFont(size=25, weight="bold"))
+    logo_label.grid(row=1, column=1, padx=20, pady=(20, 70))
+
+    label_details=ctk.CTkLabel(main_page,text="Start storing your passwords securely in a PassKeyYZ Database",font=ctk.CTkFont(size=15))
+    label_details.grid(row=1,column=1,padx=20,pady=(20,10))
+
+    create_database_button=ctk.CTkButton(main_page,text="                                                  Create New database                                                  ")
+    create_database_button.grid(row=1,column=1,padx=20,pady=(100,10))
+
+    create_database_button=ctk.CTkButton(main_page,text="                                                Open Existing Database                                                ")
+    create_database_button.grid(row=1,column=1,padx=20,pady=(175,10))
 
     main_page.mainloop()
 
